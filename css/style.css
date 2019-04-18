@@ -47,13 +47,24 @@ body {
 	margin: 0;
 }
 
-img {
+img{
 	display: block;
 	border: 1px solid var(--rgba-dc-);
 	box-shadow: var(--shadow1-);
 	border-radius: 10px;
 	width: 100%;
 	height: auto;
+}
+
+
+.masthead .fa-code{
+  background-color: var(--rgba-wh-);
+  text-shadow: var(--text-sh-);
+  padding: 40px 35px;
+  font-size: 4em;
+  border: 1px solid var(--rgba-dc-);
+  border-radius: 10px;
+  box-shadow: var(--shadow2-);
 }
 
 
@@ -130,7 +141,7 @@ General styles
   border-bottom: 1px solid var(--dc-);
 }
 
-.masthead img {
+.masthead img{
   width: 250px;
   margin: 0 auto;
 }
