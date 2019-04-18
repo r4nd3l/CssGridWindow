@@ -1,0 +1,345 @@
+/* Default DevCorner Style Setting */
+
+/* Fonts */
+@font-face {
+    font-family: 'Lobster'; /*a name to be used later*/
+    src: url('../font/Lobster_1.4.otf'); /*URL to font*/
+}
+
+:root{
+  --dc-: #28a745; /* #28a745 */
+  --rgba-dc-: rgba(40, 167, 69, 0.5);
+  --rgba-wh-: rgba(255, 255, 255, 0.5);
+  --gr-: #515151;
+  --wh-: #fefefe;
+  --sg-: #f7f7f7;
+  --lg-: #b9b9b9;
+  --shadow1-: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  --shadow2-: 0 0 8px rgba(0,0,0,0.6);
+  --shadow3-: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.08) inset;
+  --text-sh-: 2px 5px 2px rgba(33,33,33,0.25);
+  --card-: perspective(1000px) rotateY(-20deg) translateX(-20px);
+}
+
+/* This will help a bit with the layered box with different padding,margin or even border */
+*, *::before, *::after{box-sizing: border-box;}
+
+.fa-code{
+  color: var(--dc-);
+}
+
+
+/* NOTE:
+ * Grid layout stuff starts at line 224.
+ * The stuff before is just boring old CSS to make content look not crappy.
+ */
+
+/*--------------------------------------------------------------
+CSS Reset
+--------------------------------------------------------------*/
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust:     100%;
+}
+
+body {
+	margin: 0;
+}
+
+img {
+	display: block;
+	border: 1px solid var(--rgba-dc-);
+	box-shadow: var(--shadow1-);
+	border-radius: 10px;
+	width: 100%;
+	height: auto;
+}
+
+
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: var(--gr-);
+	font-family: 'Helvetica', Arial, sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0;
+	padding: 1em 0;
+}
+
+p {
+	margin: 0;
+	padding: 1em 0;
+}
+
+/*--------------------------------------------------------------
+General styles
+--------------------------------------------------------------*/
+
+.masthead {
+  padding: 2em;
+  background: url(../img/Whitey/img_06.jpeg) no-repeat 50% 50%;
+  background-size: cover;
+  text-align: center;
+  border-left: 1px solid var(--dc-);
+  border-bottom: 1px solid var(--dc-);
+}
+
+.masthead img {
+  width: 250px;
+  margin: 0 auto;
+}
+
+.site-title {
+  margin: 1em 0 0;
+  padding: 0;
+  font-size: 1.5625em;
+  font-family: Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--gr-);
+  text-shadow: var(--text-sh-);
+}
+
+.site-description {
+  margin: 0 0 1em;
+  padding: 0;
+  font-size: 1em;
+  font-family: Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-weight: 400;
+  color: var(--gr-);
+  text-shadow: var(--text-sh-);
+}
+
+.page-title {
+  text-align: center;
+  background: url(../img/img_05.jpeg) no-repeat 50% 50%;
+  background-color: #f5ebe0
+
+  color: var(--gr-);
+  font-family: Roboto;
+  font-size: 3em;
+  text-shadow: var(--text-sh-);
+  border-bottom: 1px solid var(--dc-);
+}
+
+.main-content {
+	background: var(--wh-);
+	padding: 2em;
+}
+
+.schedule-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.schedule-list li {
+  margin: .5em 0;
+  padding: 1em 0;
+  border-bottom: 1px solid var(--dc-);
+}
+
+.schedule-list li:last-child {
+  border-bottom: none;
+}
+
+.talk-title {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3em;
+}
+
+.talk-speaker {
+  margin: .5em 0;
+  padding: 0;
+}
+
+.talk-time {
+  margin: .5em 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.sidebar {
+  background: var(--wh-);
+  border-right: 1px solid var(--dc-);
+}
+
+.info {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  color: var(--gr-);
+  background-color: var(--wh-);
+}
+
+.info li {
+  padding: 1em;
+  text-align: center;
+}
+
+.a11y {
+  color: var(--gr-);
+  background: var(--wh-);
+}
+
+.coc {
+  background: var(--wh-);
+  border-top: 1px solid var(--dc-);
+  border-left: 1px solid var(--dc-);
+}
+
+.contact {
+  background: var(--wh-);
+  border-left: 1px solid var(--dc-);
+}
+
+.faq {
+  background: var(--wh-);
+  border-left: 1px solid var(--dc-);
+  border-bottom: 1px solid var(--dc-);
+}
+
+.colophon {
+	padding: 1em 2em;
+	background: var(--wh-);
+	color: var(--gr-);
+}
+
+.colophon a {
+	color: white;
+}
+
+.colophon a:hover,
+.colophon a:focus {
+	border-bottom: 1px solid white;
+}
+
+/*--------------------------------------------------------------
+If no grid support, limit width to 50em and center align
+--------------------------------------------------------------*/
+@supports not (display: grid) {
+	.page-title,
+  .main-content,
+  .sidebar {
+		max-width: 50em;
+		margin: 0 auto;
+	}
+}
+
+/*--------------------------------------------------------------
+CSS Grid layout for wider screens, when browser supports grid:
+--------------------------------------------------------------*/
+
+@supports (display: grid) {
+  @media screen and (min-width: 800px) {
+
+  	.site {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 1fr 3fr;
+      grid-template-areas:
+        "content-head content-head"
+        "main header"
+        "main sidebar"
+        "footer footer";
+		}
+
+    .masthead {
+      grid-area: header;
+    }
+
+    .page-title {
+      grid-area: content-head;
+    }
+
+    .main-content {
+      grid-area: main;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+    }
+
+    .colophon {
+      grid-area: footer;
+    }
+
+	}
+
+  @media screen and (min-width: 1200px) {
+    .site {
+			grid-template-columns: 2fr 1fr 1fr;
+      grid-template-areas:
+        "content-head content-head content-head"
+        "main header header"
+        "main sidebar footer";
+		}
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* End */
